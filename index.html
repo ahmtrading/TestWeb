@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LuminEd — Learn Bright</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo" aria-hidden="true">Lumin<span>Ed</span></div>
+      <button id="theme-toggle" aria-label="Toggle theme" class="icon-btn">🌓 Dark/Light mode</button>
+    </div>
+
+    <div class="nav-center" role="navigation" aria-label="Main">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#classes" class="nav-link">Classes</a>
+    </div>
+
+    <div class="nav-right">
+      <button id="auth-btn" class="btn auth">Login</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero section-anim">
+      <div class="hero-bg" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="hero-inner">
+        <h1 class="hero-title">All your <span class="accent">school</span> &amp; competitive prep resources — in one place</h1>
+        <p class="hero-sub">NCERT detailed explanations, PYQs with solutions, chapter-wise assessments, exemplar & NCERT solutions, sample papers, mind maps, and full JEE / NEET preparation content — for Classes 6–12.</p>
+        <div class="hero-actions">
+          <a href="#classes" class="btn primary">Choose Your Class</a>
+          <button id="auth-cta" class="btn outline">Login / Sign up</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES (highlight the resources) -->
+    <section id="features" class="features section-anim">
+      <h2 class="section-title">What LuminEd Provides</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>NCERT Detailed Explanations</h3>
+          <p>Clear, chapter-wise walkthroughs of NCERT concepts to build a rock-solid base.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>PYQs with Solutions</h3>
+          <p>Previous year questions solved in exam style with step-by-step reasoning.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Notes & Mind Maps</h3>
+          <p>Concise revision notes and visual mind maps to capture the essence quickly.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Chapter-wise Assessments</h3>
+          <p>Short tests after each chapter to track improvement and weak areas.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>NCERT & Exemplar Solutions</h3>
+          <p>Complete solved answers for NCERT and exemplar problems for practice.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Sample Papers</h3>
+          <p>Sample papers to simulate exam experience and increase speed.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>JEE Preparation Content</h3>
+          <p>Targeted materials and problem sets aligned with JEE mains/advanced level.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>NEET Preparation Content</h3>
+          <p>Focused theory & practice questions for biology-heavy competitive prep.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLASS SELECTION -->
+    <section id="classes" class="classes section-anim">
+      <h2 class="section-title">Select Your Class</h2>
+      <div class="class-grid" id="classGrid">
+        <!-- Buttons link to separate pages (class6.html ... class12.html) -->
+        <a href="class6.html" class="class-card" data-class="6">Class 6</a>
+        <a href="class7.html" class="class-card" data-class="7">Class 7</a>
+        <a href="class8.html" class="class-card" data-class="8">Class 8</a>
+        <a href="class9.html" class="class-card" data-class="9">Class 9</a>
+        <a href="class10.html" class="class-card" data-class="10">Class 10</a>
+        <a href="class11.html" class="class-card" data-class="11">Class 11</a>
+        <a href="class12.html" class="class-card" data-class="12">Class 12</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="logo tiny">Lumin<span>Ed</span></div>
+        <div class="footer-tag">Designed for future innovators.</div>
+      </div>
+      <br>
+      <br>
+      <hr>
+      <hr>
+      <br>
+      <br>
+      <h3>Our social links</h3>
+      <br>
+      <p>Instagram</p>
+      <br>
+      <p>Facebook</p>
+      <br>
+      <p>WhatsApp Channel</p>
+      <br>
+      <p>Youtube Channel</p>
+      <br>
+      <br>
+      <hr>
+      <hr>
+      <br>
+      <br>
+      <div class="footer-right">
+        <div class="copyright">© <span id="year"></span> LuminEd</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LOGIN / SIGNUP MODAL -->
+  <div id="auth-modal" class="modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+
+      <div class="auth-forms">
+        <div class="form-left">
+          <h3 id="auth-title">Welcome back!</h3>
+          <p class="muted">Enter the following details-></p>
+
+          <form id="login-form" class="auth-form">
+            <label>
+              Email
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+
+            <label>
+              Password
+              <input type="password" name="password" required minlength="6" placeholder="min 6 characters" />
+            </label>
+
+            <div class="form-row">
+              <button type="submit" class="btn primary">SignUp</button>
+              <button type="button" id="show-signup" class="btn outline"></button>
+            </div>
+            <div class="form-note"></div>
+          </form>
+        </div>
+
+        <div class="form-right">
+          <h3></h3>
+          <p class="muted"></p>
+
+          <form id="signup-form" class="auth-form hidden">
+            <label>
+              Full name
+              <input type="text" name="name" required placeholder="Your name" />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+
+            <label>
+              Password
+              <input type="password" name="password" required minlength="6" placeholder="Create a password" />
+            </label>
+
+            <div class="form-row">
+              <button type="submit" class="btn primary">Sign up</button>
+              <button type="button" id="show-login" class="btn outline">Back to login</button>
+            </div>
+            <div class="form-note">We store only hashed passwords on real backends. This demo keeps no real user data.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
